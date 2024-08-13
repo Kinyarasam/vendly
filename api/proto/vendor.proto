@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package vendor;
+
+option go_package = "github.com/kinyarasam/vendly/api/proto;vendor";
+
+service VendorService {
+    rpc RegisterVendor(RegisterVendorRequest) returns (RegisterVendorResponse);
+}
+
+message RegisterVendorRequest {
+    string name = 1;
+    string email = 2;
+}
+
+message RegisterVendorResponse {
+    bool success = 1;
+    string vendorId = 2;
+}
