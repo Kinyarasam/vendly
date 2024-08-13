@@ -5,10 +5,7 @@ WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
 
-COPY . /app/
-
-# Add this line to inspect the directory structure
-RUN ls -R /app
+COPY . .
 
 RUN go build -o vendor-service ./cmd/vendor-service
 

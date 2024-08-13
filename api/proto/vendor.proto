@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package vendor;
 
-option go_package = "github.com/kinyarasam/vendly/api/proto;vendor";
+option go_package = "/api/proto;vendor";
 
 service VendorService {
     rpc RegisterVendor(RegisterVendorRequest) returns (RegisterVendorResponse);

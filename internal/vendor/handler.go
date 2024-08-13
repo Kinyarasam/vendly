@@ -30,5 +30,5 @@ func (s *Server) RegisterVendor(ctx context.Context, req *pb.RegisterVendorReque
 	return &pb.RegisterVendorResponse{
 		Success:  true,
 		VendorId: vendor.ID,
-	}
+	}, err
 }
