@@ -22,7 +22,8 @@ func main() {
 	pb.RegisterVendorServiceServer(s, vendorServer)
 
 	log.Println("Vendor service is running on port 50051...")
+
 	if err := s.Serve(lis); err != nil {
-		log.Fatal("Failed to serve: %v", err)
+		log.Fatalf("Failed to serve: %v", err)
 	}
 }
